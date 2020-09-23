@@ -10,5 +10,8 @@ page = requests.get(URL, headers=headers)
 
 soup = BeautifulSoup(page.content, 'html.parser')
 
-print(soup.prettify())
+# Get the id from the Webpage, by clicking f12 and inspecting the element
+title = soup.find(id = "productTitle").get_text().strip()
+
+print(title)
 
