@@ -12,6 +12,8 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 # Get the id from the Webpage, by clicking f12 and inspecting the element
 title = soup.find(id = "productTitle").get_text().strip()
+price = soup.find(id = "priceblock_ourprice").get_text().strip()
 
-print(title)
+print(price)
+print(type(price))
 
