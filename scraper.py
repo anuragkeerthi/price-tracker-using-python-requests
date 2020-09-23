@@ -13,7 +13,7 @@ soup = BeautifulSoup(page.content, 'html.parser')
 # Get the id from the Webpage, by clicking f12 and inspecting the element
 title = soup.find(id = "productTitle").get_text().strip()
 price = soup.find(id = "priceblock_ourprice").get_text().strip()
+converted_price = float(price[2:].replace(',',''))
+print(converted_price)
 
-print(price)
-print(type(price))
 
